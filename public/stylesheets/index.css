@@ -1,0 +1,72 @@
+html {
+    background: rgb(27, 27, 27);
+    background: linear-gradient(75deg, rgb(27, 27, 27), rgb(27, 27, 27), rgb(0, 131, 238));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vw;
+}
+
+body {
+    overscroll-behavior: none;
+    overflow-x:hidden;
+    overflow-y: hidden;
+}
+
+#enterButton {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -170px;
+    background: rgb(0, 131, 238);
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: "Roboto Mono", "monospace";
+    background-image: linear-gradient(90deg, rgb(27, 27, 27), rgb(0, 131, 238), rgb(0, 131, 238), rgb(27, 27, 27)) !important; 
+    background-size: 300% ;
+    background-position: left;
+    animation-name: introFade;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    transition: 300ms background-position ease-in-out;
+}
+
+
+#enterButton:hover {
+    background-position: right; 
+}
+
+
+#enterText {    
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;  
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.anim-typewriter{
+    animation:  typewriter 0.7s steps(10) 1.2s 1 normal both,
+                blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+    from { width: 0; }
+    to { width: 9em; }
+}
+
+@keyframes blinkTextCursor{
+    from { border-right-color: rgba(255,255,255,.75); }
+    to { border-right-color: transparent; }
+}
+
+@keyframes introFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
